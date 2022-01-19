@@ -1,0 +1,96 @@
+.footer {
+  background: var(--footer-background);
+  padding: 29px 42px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    padding-bottom: 28px;
+  }
+
+  &__text {
+    margin: 0px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: var(--footer-color);
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 1.18;
+    }
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 3px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text__decoration {
+    cursor: pointer;
+
+    text-decoration: underline;
+  }
+
+  &__text__decoration:hover,
+  &__text__decoration:focus {
+    color: var(--accent-color);
+  }
+}
+
+.heart {
+  animation: heartbeat 1s infinite;
+  background-color: var(--accent-color);
+  display: inline-block;
+  height: 6px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 6px;
+
+  @media screen and (min-width: 768px) {
+    height: 7px;
+    width: 7px;
+  }
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  height: 6px;
+  position: absolute;
+  width: 6px;
+
+  @media screen and (min-width: 768px) {
+    height: 7px;
+    width: 7px;
+  }
+}
+
+.heart:before {
+  top: -3px;
+  left: 0;
+
+  @media screen and (min-width: 768px) {
+    top: -4px;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  20% {
+    transform: scale(1.25) rotate(-45deg);
+  }
+  40% {
+    transform: scale(1.5) rotate(-45deg);
+  }
+}

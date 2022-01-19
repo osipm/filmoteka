@@ -3,5 +3,22 @@
  * Все паршалы подключаются сюда.
  */
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './base/common';
+@import './base/theme-switch';
+@import './base/card-set';
+
+@import './utils/variables';
+@import './layouts/footer';
+
+@import './base/header';
+
+@import './components/pagination';
+@import './components/up-icon';
+@import './components/text-empty';
+@import './layouts/one-movie-card';
+
+@import './layouts/modal';
+
+@import './components/rainbow-spiner';
+
+@import './layouts/developers-modal';
